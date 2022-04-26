@@ -1,17 +1,37 @@
-img{
-  width: 100%;
-  display: block;
-  /* height: 300px; */
-  object-fit: cover;
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
-.one{
-  width: 49.5%;
-  margin-right: 0.5%;
-  float: left;
-  height: 200px;
+
+body{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color: #222;
 }
-.two{
-  width: 49.5%;
-  margin-right: 0.5%;
-  float: left;
+.container{
+ border: 5px solid black;
+}
+.cell{
+ padding: 2rem;
+ background: #dedede;
+ text-transform: uppercase;
+ font-weight: bold;
+ text-align: center;
+ border: 3px solid red;
+ color: #fff;
+}
+.cell-1{
+ background: #581f18;
+}
+.cell-2{
+ background: #f0a202;
+}
+.cell-3{
+ background: #d95d39;
+}
+.cell-4{
+ background: #202c59;
+}
+.cell-5{
+ background: #51cb20;
 }
