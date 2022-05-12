@@ -1,37 +1,146 @@
+
+/* 
+================
+variables
+================
+*/
+:root{
+ --primaryColor: #f15025;
+ --mainBlack: #222;
+ --mainWhite: #fff;
+ --offWhite: #f7f7f7;
+ --darkGrey:#afafaf;
+ --maniTransition: all 0.3s linear;
+ --mainSpacing: 0.2rem;
+}
+/* 
+================
+Global styles
+================
+*/
+
 *{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+   font-family: "Fira Code", monospace;
+   color: var(--mainblack);
+   background: var(--mainWhite);
+   line-height: 1.5;
+}
+a{
+ text-decoration: none;
+}
+img{
+ width:100%;
+ display: block;
 }
 
-body{
- font-family: Verdana, Geneva, Tahoma, sans-serif;
- color: #222;
+h1,h2,h3{
+ text-transform: capitalize;
+ letter-spacing: var(--mainSpacing);
+ margin-bottom: 1.25rem;
 }
-.container{
- border: 5px solid black;
+h1{
+ font-size: 3rem;
 }
-.cell{
- padding: 2rem;
- background: #dedede;
- text-transform: uppercase;
- font-weight: bold;
- text-align: center;
- border: 3px solid red;
- color: #fff;
+h2{
+ margin-bottom: 0;
 }
-.cell-1{
- background: #581f18;
+p{
+ font-weight: 300;
+ font-size: 0.7rem;
+ line-height: 2;
 }
-.cell-2{
- background: #f0a202;
+/* button */
+.btn{
+display: inline-block;
+padding: 0.5rem 1rem;
+text-transform: capitalize;
+border: 3px solid var(--primaryColor);
+color: var(--primaryColor);
+margin: 3rem;
+transition: var(--maniTransition);
 }
-.cell-3{
- background: #d95d39;
+.btn:hover{
+ background:var(--primaryColor);
+ color: var(--mainWhite);
 }
-.cell-4{
- background: #202c59;
+/* 
+================
+main navbar
+================
+*/
+
+.main-navbar{
+ background: var(--darkGrey);
+ padding: 0 2rem;
 }
-.cell-5{
- background: #51cb20;
+.main-navbar li{
+ list-style: none;
 }
+.main-navbar a{
+ text-transform: capitalize;
+ display: block;
+ padding: 1rem 0;
+ color: var(--primaryColor);
+ letter-spacing: var(--mainSpacing);
+ transition: var(--maniTransition);
+}
+
+.main-navbar a:hover{
+ color: var(--mainBlack);
+}
+
+@media screen and (min-width:992px) {
+ .main-navbar ul{
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ }
+ .main-navbar a{
+  text-align: center;
+ }
+}
+/* 
+================
+main hero
+================
+*/
+.hero-header{
+ min-height: 100vh;
+ background: var(--primaryColor);
+ color: var(--mainWhite);
+ display: grid;
+ justify-content: center;
+ align-items: center;
+}
+.hero-banner{
+ /* background: blue; */
+ /* text-align: center; */
+
+}
+.hero-banner p{
+ width: 80%;
+ max-width: 560px;
+ font-size: 1rem;
+}
+
+@media screen and (max-width:600px) {
+ .hero-banner{
+   padding: 0 3rem;
+ }
+}
+@media screen and (min-width:768px) {
+ .hero-header{
+   background:linear-gradient(rgba(241,80,37,0.75),rgba(0,0,0,0.75)) ,url('./images/image-2.jpeg') center/cover fixed no-repeat;
+ }
+}
+/* 
+================
+Cards
+================
+*/
